@@ -14,7 +14,7 @@ const IndexPage = ({ data: { page } }) => {
             Hi, I'm Spencer
             <br /> Evison Campbell.
           </h1>
-          <h2 className="text-lg font-normal">
+          <h2 className="text-lg font-normal fadeInLeft">
             I'm a freelance Front End Developer based in California. I'm
             passionate about creating beautiful user experiences that are both
             <span className="font-semibold"> accessible</span> and
