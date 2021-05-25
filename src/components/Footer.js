@@ -1,5 +1,5 @@
 import React from "react";
-import { Facebook, Instagram } from "react-feather";
+import { Linkedin, Twitter, GitHub } from "react-feather";
 import Logo from "svg/logo.svg";
 import site from "site.config.json";
 import { Link } from "gatsby";
@@ -19,11 +19,29 @@ export default function Footer() {
           © 2021 {site.author}
         </p>
         <span className="inline-flex justify-center mt-4 sm:justify-start sm:ml-auto sm:mt-0">
-          <a className="text-gray-500" href="#">
-            <Facebook className="w-5 h-5" />
+          <a
+            className="text-gray-500"
+            href="https://twitter.com/spencerevison"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Twitter className="w-5 h-5" />
           </a>
-          <a className="ml-3 text-gray-500" href="#">
-            <Instagram className="w-5 h-5" />
+          <a
+            className="ml-3 text-gray-500"
+            href="https://github.com/spencerevison"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <GitHub className="w-5 h-5" />
+          </a>
+          <a
+            className="ml-3 text-gray-500"
+            href="https://www.linkedin.com/in/campbellspencer/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Linkedin className="w-5 h-5" />
           </a>
         </span>
       </div>
