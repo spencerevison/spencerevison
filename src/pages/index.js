@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "components/Layout";
 import SEO from "../components/SEO";
+import FadeIn from "react-fade-in";
 import { graphql } from "gatsby";
 import site from "../site.config.json";
 
@@ -9,12 +10,12 @@ const IndexPage = ({ data: { page } }) => {
     <Layout>
       <SEO titleTemplate={site.title} />
       <div className="container flex items-center mx-auto h-screen-nav-xs md:h-screen-nav-md">
-        <div className="">
+        <FadeIn>
           <h1 className="mb-6 text-4xl font-extrabold leading-snug sm:text-5xl sm:leading-snug">
             Hi, I'm Spencer
             <br /> Evison Campbell.
           </h1>
-          <h2 className="text-lg font-normal fadeInLeft">
+          <h2 className="text-lg font-normal">
             I'm a freelance Front End Developer based in California. I'm
             passionate about creating beautiful user experiences that are both
             <span className="font-semibold"> accessible</span> and
@@ -23,7 +24,7 @@ const IndexPage = ({ data: { page } }) => {
             <span className="font-semibold"> React</span> and
             <span className="font-semibold"> JAMstack</span>.
           </h2>
-        </div>
+        </FadeIn>
       </div>
     </Layout>
   );
