@@ -17,7 +17,14 @@ module.exports = {
     {
       resolve: "gatsby-source-datocms",
       options: {
-        apiToken: "b5019e46a4caf253589f28c4d2d4d8",
+        apiToken: "88fb2eca14288f39ec9e58e1edada2",
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content/`,
       },
     },
     {
@@ -47,7 +54,7 @@ module.exports = {
           google: [
             {
               family: "Roboto",
-              variants: ["300", "400", "600", "800"],
+              variants: ["300", "500", "800"],
             },
           ],
         },

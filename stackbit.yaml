@@ -1,0 +1,24 @@
+stackbitVersion: ~0.3.0
+
+# The name of the static-site-generator
+ssgName: gatsby
+
+# Use node version 12
+nodeVersion: '12'
+
+# The site has no data files (json, yaml, .etc)
+dataDir: null
+
+# The folder with markdown files representing your site pages
+pagesDir: src/content
+
+# This site uses "relative" assets pattern. That is, asset files are referenced
+# from content files using relative paths
+assets:
+  # asset are referenced using relative paths
+  referenceType: relative
+  # the common ancestor folder that contains all site images
+  # is the root '' folder
+  assetsDir: ''
+  # uploaded images will be stored in 'src/images'
+  uploadDir: static/images
