@@ -3,7 +3,7 @@ const lighten = (clr, val) => Color(clr).lighten(val).rgb().string();
 const darken = (clr, val) => Color(clr).darken(val).rgb().string();
 
 const colors = {
-  primary: "#88363B",
+  primary: "#4C1D95",
   secondary: "#9B63C8",
   tertiary: "#F4A5AE",
   quaternary: "#F5D7E3",
@@ -48,7 +48,7 @@ module.exports = {
         highlight: lighten(colors.primary, 0.5),
       },
       fontFamily: {
-        sans: ["Manrope", "sans-serif"],
+        sans: ["Roboto", "Helvetica", "Arial", "sans-serif"],
       },
       container: {
         center: true,
@@ -62,6 +62,39 @@ module.exports = {
       },
       gridTemplateRows: {
         layout: "auto 1fr auto;",
+      },
+      fontWeight: {
+        normal: 300,
+        semibold: 500,
+        extrabold: 900,
+      },
+      height: {
+        "screen/2": "50vh",
+        "screen/3": "33.33vh",
+        "screen/4": "25vh",
+        "screen/5": "20vh",
+        120: "30rem",
+        140: "35rem",
+        160: "40rem",
+        200: "50rem",
+        280: "70rem",
+        360: "90rem",
+        480: "120rem",
+        "screen-nav-xs": "calc(100vh - 56px)",
+        "screen-nav-md": "calc(100vh - 72px)",
+      },
+      width: {
+        "screen/2": "50vw",
+        "screen/3": "33.33vw",
+        "screen/4": "25vw",
+        "screen/5": "20vw",
+        120: "30rem",
+        140: "35rem",
+        160: "40rem",
+        200: "50rem",
+        280: "70rem",
+        360: "90rem",
+        480: "120rem",
       },
     },
   },

@@ -1,8 +1,8 @@
 {
-  "title": "Gatsby Tailwind Starter",
-  "description": "Starting out with Gatsby and Tailwind",
+  "title": "Spencer Evison",
+  "description": "",
   "author": "Spencer Evison",
-  "baseurl": "https://www.<site-url>.com/",
+  "baseurl": "https://www.spencerevison.com/",
   "ogimage": "",
   "nav": [
     {
@@ -14,12 +14,16 @@
       "path": "/about"
     },
     {
+      "title": "Work",
+      "path": "/work"
+    },
+    {
+      "title": "Resume",
+      "path": "/resume"
+    },
+    {
       "title": "Get In Touch",
       "path": "/contact"
     }
-  ],
-  "cta": {
-    "title": "Call To Action",
-    "path": "#"
-  }
+  ]
 }

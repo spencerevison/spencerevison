@@ -7,6 +7,7 @@ module.exports = {
     defaultImage: "/images/social.jpg",
   },
   plugins: [
+    "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
@@ -42,7 +43,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-fonts",
       options: {
-        fonts: ["Manrope:200,400,600,800"],
+        fonts: ["Roboto:300,400,500,800,900"],
         display: "swap",
       },
     },
