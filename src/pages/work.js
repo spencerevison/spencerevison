@@ -9,7 +9,7 @@ const WorkPage = ({ data: { page } }) => {
   return (
     <Layout>
       <SEO title={page.title} />
-      <FadeIn className="container">
+      <div className="container">
         <div className="article">
           <h1
             className="text-center md:w-full"
@@ -20,7 +20,7 @@ const WorkPage = ({ data: { page } }) => {
             dangerouslySetInnerHTML={{ __html: page.body }}
           />
         </div>
-      </FadeIn>
+      </div>
     </Layout>
   );
 };
