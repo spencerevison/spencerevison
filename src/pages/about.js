@@ -11,10 +11,10 @@ const AboutPage = ({ data: { page } }) => {
       <SEO title={page.title} />
       <div className="container">
         <div className="flex-wrap text-center article md:flex">
-          <FadeIn className="md:w-full">
+          <FadeIn delay={0} className="md:w-full">
             <h1 dangerouslySetInnerHTML={{ __html: page.title }} />
           </FadeIn>
-          <FadeIn delay={150} className="self-start flex-none md:mr-8">
+          <FadeIn delay={50} className="self-start flex-none md:mr-8">
             <StaticImage
               src="../../static/images/profilePic.jpg"
               placeholder="blurred"
@@ -22,7 +22,7 @@ const AboutPage = ({ data: { page } }) => {
               width={250}
             />
           </FadeIn>
-          <FadeIn delay={300} className="flex-1 text-left md:-mt-6">
+          <FadeIn delay={100} className="flex-1 text-left md:-mt-6">
             <article dangerouslySetInnerHTML={{ __html: page.body }} />
           </FadeIn>
         </div>
