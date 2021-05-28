@@ -22,9 +22,9 @@ const AboutPage = ({ data: { page } }) => {
               width={250}
             />
           </FadeIn>
-          <FadeIn delay={100} className="flex-1 text-left md:-mt-6">
+          <div className="flex-1 text-left md:-mt-6">
             <article dangerouslySetInnerHTML={{ __html: page.body }} />
-          </FadeIn>
+          </div>
         </div>
       </div>
     </Layout>
