@@ -26,16 +26,33 @@ export default function Header() {
                 </Popover.Button>
               </div>
               <Popover.Group as="nav" className="hidden space-x-6 md:flex">
-                {site.nav.map((item) => (
-                  <Link
-                    key={item.title}
-                    to={item.path}
-                    className="p-2 text-base text-gray-900"
-                    activeClassName="border-b-2 border-gray-900"
-                  >
-                    {item.title}
-                  </Link>
-                ))}
+                {site.nav.map((item) => {
+                  if (item.download === true) {
+                    return (
+                      <a
+                        key={item.title}
+                        href={item.path}
+                        target="_blank"
+                        className="p-2 text-base text-gray-900"
+                        rel="noreferrer"
+                      >
+                        {item.title}
+                      </a>
+                    );
+                  } else {
+                    return (
+                      <Link
+                        key={item.title}
+                        to={item.path}
+                        target={item.target}
+                        className="p-2 text-base text-gray-900"
+                        activeClassName="border-b-2 border-gray-900"
+                      >
+                        {item.title}
+                      </Link>
+                    );
+                  }
+                })}
               </Popover.Group>
             </div>
             <HamburgerMenu open={open} />

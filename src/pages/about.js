@@ -1,19 +1,31 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "components/Layout";
-import { StaticImage } from "gatsby-plugin-image";
 import SEO from "../components/SEO";
+import FadeIn from "react-fade-in";
+import { StaticImage } from "gatsby-plugin-image";
 
-const AboutPage = ({ data: { markdownRemark } }) => {
-  console.log(markdownRemark);
+const AboutPage = ({ data: { page } }) => {
   return (
     <Layout>
-      <SEO title={markdownRemark.frontmatter.title} />
+      <SEO title={page.title} />
       <div className="container">
-        <article
-          dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
-          className="py-12 mx-auto prose sm:py-18 lg:prose-lg xl:prose-xl max-w-7xl"
-        />
+        <div className="flex-wrap text-center article md:flex">
+          <FadeIn className="md:w-full">
+            <h1 dangerouslySetInnerHTML={{ __html: page.title }} />
+          </FadeIn>
+          <FadeIn delay={150} className="self-start flex-none md:mr-8">
+            <StaticImage
+              src="../../static/images/profilePic.jpg"
+              placeholder="blurred"
+              alt=""
+              width={250}
+            />
+          </FadeIn>
+          <FadeIn delay={300} className="flex-1 text-left md:-mt-6">
+            <article dangerouslySetInnerHTML={{ __html: page.body }} />
+          </FadeIn>
+        </div>
       </div>
     </Layout>
   );
@@ -23,11 +35,9 @@ export default AboutPage;
 
 export const query = graphql`
   query AboutQuery {
-    markdownRemark(frontmatter: { title: { eq: "About" } }) {
-      html
-      frontmatter {
-        title
-      }
+    page: datoCmsStandardPage(slug: { eq: "about" }, title: {}) {
+      title
+      body
     }
   }
 `;

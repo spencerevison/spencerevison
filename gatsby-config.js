@@ -11,20 +11,13 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
-    "gatsby-transformer-remark",
     "gatsby-transformer-sharp",
     "gatsby-plugin-postcss",
+    "gatsby-transformer-remark",
     {
       resolve: "gatsby-source-datocms",
       options: {
         apiToken: "88fb2eca14288f39ec9e58e1edada2",
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `content`,
-        path: `${__dirname}/src/content/`,
       },
     },
     {
@@ -34,6 +27,7 @@ module.exports = {
           components: "src/components",
           pages: "src/pages",
           svg: "static/images/svg",
+          images: "static/images",
           "site.config.json": "src/site.config.json",
           styles: "src/styles",
         },

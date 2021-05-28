@@ -19,7 +19,8 @@
     },
     {
       "title": "Resume",
-      "path": "/resume"
+      "path": "/pdf/Resume-Spencer_Evison.pdf",
+      "download": true
     },
     {
       "title": "Get In Touch",

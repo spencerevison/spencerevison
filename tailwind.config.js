@@ -80,8 +80,9 @@ module.exports = {
         280: "70rem",
         360: "90rem",
         480: "120rem",
-        "screen-nav-xs": "calc(100vh - 56px)",
-        "screen-nav-md": "calc(100vh - 72px)",
+        "screen-nav-xs": "calc(100vh - 232px)",
+        "screen-nav-sm": "calc(100vh - 160px)",
+        "screen-nav-md": "calc(100vh - 176px)",
       },
       width: {
         "screen/2": "50vw",
