@@ -22,8 +22,7 @@ const WorkPage = ({ data: { page, projects } }) => {
           />
           <FadeIn>
             {projects.nodes
-              .slice(0)
-              .reverse()
+              .sort((a, b) => (a.position > b.position ? 1 : -1))
               .map((project) => (
                 <PortfolioProject key={project.title} project={project} />
               ))}
@@ -43,6 +42,7 @@ export const query = graphql`
     }
     projects: allDatoCmsProject {
       nodes {
+        position
         codeUrl
         description
         projectUrl
