@@ -22,6 +22,7 @@ const WorkPage = ({ data: { page, projects } }) => {
           />
           <FadeIn>
             {projects.nodes
+              .slice(0)
               .sort((a, b) => (a.position > b.position ? 1 : -1))
               .map((project) => (
                 <PortfolioProject key={project.title} project={project} />
