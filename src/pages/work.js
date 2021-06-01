@@ -6,7 +6,6 @@ import PortfolioProject from "../components/PortfolioProject";
 import FadeIn from "react-fade-in/src/FadeIn";
 
 const WorkPage = ({ data: { page, projects } }) => {
-  console.log(projects);
   return (
     <Layout>
       <SEO title={page.title} />
