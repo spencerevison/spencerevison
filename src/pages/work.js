@@ -6,6 +6,10 @@ import PortfolioProject from "../components/PortfolioProject";
 import FadeIn from "react-fade-in/src/FadeIn";
 
 const WorkPage = ({ data: { page, projects } }) => {
+  const sortedProjects = projects.nodes
+    .sort((a, b) => (a.position > b.position ? 1 : -1))
+    .map((project, i) => <PortfolioProject key={i} project={project} />);
+
   return (
     <Layout>
       <SEO title={page.title} />
@@ -19,14 +23,7 @@ const WorkPage = ({ data: { page, projects } }) => {
             className=""
             dangerouslySetInnerHTML={{ __html: page.body }}
           />
-          <FadeIn>
-            {projects.nodes
-              .slice(0)
-              .sort((a, b) => (a.position > b.position ? 1 : -1))
-              .map((project) => (
-                <PortfolioProject key={project.title} project={project} />
-              ))}
-          </FadeIn>
+          <FadeIn>{sortedProjects}</FadeIn>
         </div>
       </div>
     </Layout>
