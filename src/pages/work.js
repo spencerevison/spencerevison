@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "components/Layout";
 import SEO from "../components/SEO";
 import PortfolioProject from "../components/PortfolioProject";
+import FadeIn from "react-fade-in/src/FadeIn";
 
 const WorkPage = ({ data: { page, projects } }) => {
   console.log(projects);
@@ -19,12 +20,14 @@ const WorkPage = ({ data: { page, projects } }) => {
             className=""
             dangerouslySetInnerHTML={{ __html: page.body }}
           />
-          {projects.nodes
-            .slice(0)
-            .reverse()
-            .map((project) => (
-              <PortfolioProject key={project.title} project={project} />
-            ))}
+          <FadeIn>
+            {projects.nodes
+              .slice(0)
+              .reverse()
+              .map((project) => (
+                <PortfolioProject key={project.title} project={project} />
+              ))}
+          </FadeIn>
         </div>
       </div>
     </Layout>
