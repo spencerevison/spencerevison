@@ -12,9 +12,13 @@ a {
 }
 
 strong, b {
-  @apply font-extrabold;
+  font-weight: 500 !important;
 }
 
 .article {
   @apply prose sm:py-16 lg:prose-lg xl:prose-xl mx-auto py-12 max-w-none;
+}
+
+.article img {
+  @apply mt-0;
 }

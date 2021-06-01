@@ -2,10 +2,10 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "components/Layout";
 import SEO from "../components/SEO";
-import FadeIn from "react-fade-in";
-import { StaticImage } from "gatsby-plugin-image";
+import PortfolioProject from "../components/PortfolioProject";
 
-const WorkPage = ({ data: { page } }) => {
+const WorkPage = ({ data: { page, projects } }) => {
+  console.log(projects);
   return (
     <Layout>
       <SEO title={page.title} />
@@ -19,6 +19,12 @@ const WorkPage = ({ data: { page } }) => {
             className=""
             dangerouslySetInnerHTML={{ __html: page.body }}
           />
+          {projects.nodes
+            .slice(0)
+            .reverse()
+            .map((project) => (
+              <PortfolioProject key={project.title} project={project} />
+            ))}
         </div>
       </div>
     </Layout>
@@ -28,10 +34,20 @@ const WorkPage = ({ data: { page } }) => {
 export default WorkPage;
 
 export const query = graphql`
-  query WorkQuery {
-    page: datoCmsStandardPage(slug: { eq: "work" }, title: {}) {
+  query {
+    page: datoCmsStandardPage(slug: { eq: "work" }) {
       title
-      body
+    }
+    projects: allDatoCmsProject {
+      nodes {
+        codeUrl
+        description
+        projectUrl
+        title
+        image {
+          gatsbyImageData(width: 800)
+        }
+      }
     }
   }
 `;

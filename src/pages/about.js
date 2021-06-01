@@ -2,10 +2,10 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "components/Layout";
 import SEO from "../components/SEO";
-import FadeIn from "react-fade-in";
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const AboutPage = ({ data: { page } }) => {
+  const mainImage = getImage(page.mainImage);
   return (
     <Layout>
       <SEO title={page.title} />
@@ -15,15 +15,13 @@ const AboutPage = ({ data: { page } }) => {
             className="md:w-full"
             dangerouslySetInnerHTML={{ __html: page.title }}
           />
-          <StaticImage
+          <GatsbyImage
             className="self-start flex-none md:mr-8"
-            src="../../static/images/profilePic.jpg"
-            placeholder="blurred"
+            image={mainImage}
             alt=""
-            width={250}
           />
           <article
-            className="flex-1 text-left md:-mt-6"
+            className="flex-1 text-left md:-mt-7"
             dangerouslySetInnerHTML={{ __html: page.body }}
           />
         </div>
@@ -35,8 +33,11 @@ const AboutPage = ({ data: { page } }) => {
 export default AboutPage;
 
 export const query = graphql`
-  query AboutQuery {
-    page: datoCmsStandardPage(slug: { eq: "about" }, title: {}) {
+  query {
+    page: datoCmsStandardPage(slug: { eq: "about" }) {
+      mainImage {
+        gatsbyImageData(placeholder: BLURRED, width: 250)
+      }
       title
       body
     }

@@ -6,6 +6,9 @@ module.exports = {
     siteUrl: "https://www.site-url.com",
     defaultImage: "/images/social.jpg",
   },
+  flags: {
+    DEV_SSR: false,
+  },
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
