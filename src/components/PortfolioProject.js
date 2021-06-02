@@ -4,12 +4,13 @@ import { ArrowRight } from "react-feather";
 import "styles/button.css";
 
 export default function PortfolioProject({ project }) {
+  console.log(project.description);
   const image = getImage(project.image);
   return (
     <div className="mb-6 lg:-mt-6 lg:mb-10 lg:flex gap-8">
       <div className="lg:w-1/2">
         <h2 className="lg:mt-0">{project.title}</h2>
-        <p dangerouslySetInnerHTML={{ __html: project.description }} />
+        <div dangerouslySetInnerHTML={{ __html: project.description }} />
         <div className="flex gap-8">
           <a
             href={project.projectUrl}
