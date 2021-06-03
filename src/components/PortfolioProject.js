@@ -4,7 +4,6 @@ import { ArrowRight } from "react-feather";
 import "styles/button.css";
 
 export default function PortfolioProject({ project }) {
-  console.log(project.description);
   const image = getImage(project.image);
   return (
     <div className="mb-6 lg:-mt-6 lg:mb-10 lg:flex gap-8">
