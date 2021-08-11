@@ -33,7 +33,7 @@ export default function Header() {
                         key={item.title}
                         href={item.path}
                         target="_blank"
-                        className="p-2 text-base text-gray-900"
+                        className="p-2 text-base text-gray-900 border-b border-transparent hover:border-gray-900"
                         rel="noreferrer"
                       >
                         {item.title}
@@ -45,8 +45,8 @@ export default function Header() {
                         key={item.title}
                         to={item.path}
                         target={item.target}
-                        className="p-2 text-base text-gray-900"
-                        activeClassName="border-b-2 border-gray-900"
+                        className="p-2 text-base text-gray-900 border-b border-transparent hover:border-gray-900"
+                        activeClassName="border-b border-gray-900"
                       >
                         {item.title}
                       </Link>

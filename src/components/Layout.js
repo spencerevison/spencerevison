@@ -6,7 +6,7 @@ export default function Layout({ children }) {
   return (
     <div className="min-h-screen grid grid-rows-layout">
       <Header />
-      <main>{children}</main>
+      <main className="grid">{children}</main>
       <Footer />
     </div>
   );

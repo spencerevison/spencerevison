@@ -9,7 +9,7 @@ const IndexPage = ({ data: { page } }) => {
   return (
     <Layout>
       <SEO titleTemplate={site.title} />
-      <div className="container flex items-center mx-auto h-screen-nav-xs md:h-screen-nav-md">
+      <div className="container flex items-center mx-auto">
         <FadeIn>
           <h1
             className="mb-6 text-4xl font-extrabold leading-snug sm:text-5xl sm:leading-snug"

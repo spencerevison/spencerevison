@@ -6,9 +6,7 @@ body {
 
 a {
   @apply text-primary;
-  @apply hover:text-primary-dark;
-  @apply focus:border-primary;
-  transition: all 150ms ease-out;
+  transition: all 250ms cubic-bezier(0.75, 0, 0.125, 1);
 }
 
 strong, b {

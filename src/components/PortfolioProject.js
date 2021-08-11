@@ -16,7 +16,7 @@ export default function PortfolioProject({ project }) {
         <div className="flex gap-8">
           <a
             href={project.projectUrl}
-            className="relative inline-block px-5 py-0 overflow-hidden text-sm font-semibold tracking-widest text-center uppercase border-2 border-gray-900 border-solid rounded-lg button button--slick focus:outline-none"
+            className="relative inline-block px-5 py-0 overflow-hidden text-sm font-semibold tracking-widest text-center uppercase border border-gray-900 border-solid rounded-lg button button--slick"
             data-text="SEE LIVE"
             target="_blank"
             rel="noreferrer"

@@ -15,7 +15,7 @@ export default function Footer() {
           <Logo className="w-10 h-10 p-2 pl-0 text-white" />
           <span className="pr-2 text-l">{site.title}</span>
         </Link>
-        <p className="mt-4 text-sm text-gray-500 sm:ml-4 sm:mt-0 sm:pl-4 sm:py-2 sm:border-l-2 sm:border-gray-200">
+        <p className="mt-4 text-sm text-gray-500 sm:ml-4 sm:mt-0 sm:pl-4 sm:py-2 sm:border-l sm:border-gray-200">
           © 2021 {site.author}
         </p>
         <span className="inline-flex justify-center mt-4 sm:justify-start sm:ml-auto sm:mt-0">
